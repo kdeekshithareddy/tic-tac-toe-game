@@ -56,3 +56,13 @@ return (self.board[0] == self.board[1] == self.board[2] != "") or \
 (self.board[6] == self.board[7] == self.board[8] != "") or \
 (self.board[0] == self.board[3] == self.board[6] != "") or \
 (self.board[1] == self.board[4] == self.board[7] != "") or \
+
+(self.board[2] == self.board[5] == self.board[8] != "") or \
+(self.board[0] == self.board[4] == self.board[8] != "") or \
+(self.board[2] == self.board[4] == self.board[6] != "")
+def check_draw(self):
+return all(piece != "" for piece in self.board)
+root = tk.Tk()
+app = TicTacToeGUI(root)
+root.mainloop()
+
